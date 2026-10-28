@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": { "urlFilter": "||adncdn.net^", "initiatorDomains": ["wenxuecity.com"], "resourceTypes": ["script", "sub_frame", "image", "xmlhttprequest", "media"] }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": { "urlFilter": "||adserver.wenxuecity.com^", "initiatorDomains": ["wenxuecity.com"], "resourceTypes": ["script", "sub_frame", "image", "xmlhttprequest", "media"] }
+  },
+  {
+    "id": 3,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": { "urlFilter": "||doubleclick.net^", "initiatorDomains": ["wenxuecity.com"], "resourceTypes": ["script", "sub_frame", "image", "xmlhttprequest", "media"] }
+  },
+  {
+    "id": 4,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": { "urlFilter": "||googlesyndication.com^", "initiatorDomains": ["wenxuecity.com"], "resourceTypes": ["script", "sub_frame", "image", "xmlhttprequest", "media"] }
+  },
+  {
+    "id": 5,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": { "urlFilter": "||googleadservices.com^", "initiatorDomains": ["wenxuecity.com"], "resourceTypes": ["script", "sub_frame", "image", "xmlhttprequest", "media"] }
+  },
+  {
+    "id": 6,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": { "urlFilter": "||vdo.ai^", "initiatorDomains": ["wenxuecity.com"], "resourceTypes": ["script", "sub_frame", "image", "xmlhttprequest", "media"] }
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Wenxuecity Ad Hider",
+  "version": "1.2.0",
+  "description": "Hide Wenxuecity ad placements and block known ad network downloads.",
+  "permissions": ["declarativeNetRequest"],
+  "host_permissions": [
+    "*://wenxuecity.com/*",
+    "*://*.wenxuecity.com/*"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      { "id": "wenxuecity_ads", "enabled": true, "path": "rules.json" }
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://wenxuecity.com/*",
+        "*://*.wenxuecity.com/*"
+      ],
+      "js": ["wenxuecity-no-ads.user.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    }
+  ]
+}

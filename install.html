@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Install Wenxuecity Ad Hider</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f4f7fb; color: #172133; line-height: 1.55; }
+    main { width: min(720px, calc(100% - 32px)); margin: 56px auto; padding: 32px; background: white; border: 1px solid #dce3ec; border-radius: 16px; box-shadow: 0 12px 35px #1c35500d; }
+    h1 { margin: 0 0 8px; font-size: clamp(1.7rem, 4vw, 2.3rem); line-height: 1.2; }
+    .intro { margin: 0 0 28px; color: #4a5870; }
+    ol { margin: 0; padding-left: 1.5rem; }
+    li { padding: 0 0 24px 8px; }
+    li:last-child { padding-bottom: 0; }
+    li::marker { color: #1556ad; font-weight: 700; }
+    strong { display: block; margin-bottom: 5px; }
+    li p strong { display: inline; margin: 0; }
+    p { margin: 5px 0 0; }
+    a { color: #1556ad; }
+    .button { display: inline-block; margin-top: 10px; padding: 9px 14px; border-radius: 8px; background: #1556ad; color: white; font-weight: 650; text-decoration: none; }
+    .button:hover, .button:focus-visible { background: #0c408a; }
+    code { padding: 2px 5px; border-radius: 4px; background: #eef2f7; font-size: 0.92em; }
+    .note { margin-top: 28px; padding: 16px; border-left: 4px solid #1556ad; background: #eef5ff; border-radius: 0 8px 8px 0; }
+    @media (max-width: 520px) { main { margin: 16px auto; padding: 24px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Install Wenxuecity Ad Hider</h1>
+    <p class="intro">Choose the Chrome extension to hide ads and block requests to known ad hosts. The Tampermonkey option hides ads on the page.</p>
+
+    <h2>Chrome extension: hide and block ad downloads</h2>
+    <ol>
+      <li><strong>Keep this folder together</strong><p>It must contain <code>manifest.json</code>, <code>rules.json</code>, and <code>wenxuecity-no-ads.user.js</code>.</p></li>
+      <li><strong>Open Chrome extensions</strong><p>Go to <code>chrome://extensions</code> and turn on <strong>Developer mode</strong>.</p></li>
+      <li><strong>Load the folder</strong><p>Click <strong>Load unpacked</strong> and select the folder containing this installation page.</p></li>
+      <li><strong>Reload Wenxuecity</strong><p>If you also installed the Tampermonkey version, disable that copy to avoid running the same script twice.</p></li>
+    </ol>
+
+    <h2>Tampermonkey: hide ads on the page</h2>
+
+    <ol>
+      <li>
+        <strong>Install Tampermonkey</strong>
+        <p>Add the official Tampermonkey extension to Chrome.</p>
+        <a class="button" href="https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo" target="_blank" rel="noopener noreferrer">Open Chrome Web Store</a>
+      </li>
+      <li>
+        <strong>Allow userscripts in Chrome</strong>
+        <p>Open <code>chrome://extensions</code>, select <strong>Details</strong> for Tampermonkey, and turn on <strong>Allow User Scripts</strong>. If that switch is unavailable, turn on <strong>Developer mode</strong> on the extensions page. See <a href="https://www.tampermonkey.net/faq.php?ext=mfdh&amp;q=Q209" target="_blank" rel="noopener noreferrer">Tampermonkey’s instructions</a>.</p>
+      </li>
+      <li>
+        <strong>Get the userscript</strong>
+        <p>Download the script below, open the downloaded file in a text editor, and copy all its contents.</p>
+        <a class="button" href="./wenxuecity-no-ads.user.js" download="wenxuecity-no-ads.user.js">Download userscript</a>
+      </li>
+      <li>
+        <strong>Save it in Tampermonkey</strong>
+        <p>Click the Tampermonkey icon, open its dashboard, and choose <strong>Create a new script</strong>. Replace the editor contents with the copied script and press <code>Ctrl+S</code> (or <code>⌘+S</code> on Mac).</p>
+      </li>
+      <li>
+        <strong>Reload Wenxuecity</strong>
+        <p>Visit <a href="https://www.wenxuecity.com/" target="_blank" rel="noopener noreferrer">wenxuecity.com</a> or reload an open article page. Make sure the script is enabled in Tampermonkey.</p>
+      </li>
+    </ol>
+
+    <p class="note">Keep all four files in this folder. The extension uses <code>manifest.json</code>, <code>rules.json</code>, and <code>wenxuecity-no-ads.user.js</code>; the Tampermonkey download button uses the userscript file.</p>
+  </main>
+</body>
+</html>
